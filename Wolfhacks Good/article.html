@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <link rel="stylesheet" href="psa.css">
+    <script src="psa.js"></script>
+</head>
+
+<body>
+    <div class="scroll" id="nav">
+        <ul>
+            <li><img class='link' id="scrollDomain" src="logo.png" alt="Career Compass" style="width: 50px; justify-self: left;"></li>
+            <li class="link"><a href="index.html">Home</a></li>
+            <li class="link"><a href="article.html">Career Compass</a></li>
+            <li class="link"><a href="video.html">Contact Us</a></li>
+            <li class="link"><a href="signin.html">Sign In</a></li>
+            <li class="link" id="searchBox"><a><input type="text" placeholder="Search.."></a></li>
+
+        </ul>
+    </div>
+    <div class="scroll" id="scrollbg"></div>
+    <div class="scroll" id="scroller"></div>
+    <h1 class="scroll" id="scrollDomain"></h1>
+
+    <h1 id="articleTitle">Career Compass</h1>
+    <h1 id="line">___________</h1>
+    <p class="article">
+        Here you will find suitable careers that are protected from being taken over by AI. Respond to the following questions:
+    </p>   
+    <label class="article" for="previous">Enter previous occuptation:</label>
+    <input type="text" id="previous" name="previous">
+    <br><br>
+    <form class="article" id="careerCompass">
+        <label for="job">Current Occupation (if applicable): </label>
+        <input type="text" name="job">
+        <br><br>
+        <label for="industry">Industry:</label>
+        <select name="industry" id="industry">
+        <option value="select">Select</option>
+          <option value="Healthcare">Healthcare</option>
+          <option value="Transportation">Transportation</option>
+          <option value="Education">Education</option>
+         </select>
+        <br><br>
+        <label for="job2">Desired Occupation:</label>
+        <input type="text" name="job2">
+        <br><br>
+        <label for="industry">Choose an Industry:</label>
+        <select name="industry" id="industry">
+          <option value="select">Select</option>
+          <option value="Healthcare">Healthcare</option>
+          <option value="Transportation">Transportation</option>
+          <option value="Education">Education</option>
+         </select>
+        <br><br>
+        <label for="income">Choose your desired income:</label>
+        <select name="income" id="income">
+          <option value="select">Select</option>
+          <option value="30">$30,000 - $50,000</option>
+          <option value="50">$50,000 - $100,000</option>
+          <option value="100">$100,000+</option>
+         </select>
+         <br><br>
+         <label for="experience">Work Experience?</label>
+        <select name="experience" id="experience">
+            <option value="select">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+        <br><br>
+        <label for="skills">What are some of your skills?</label>
+        <input name="skills" type="text">
+        <br><br>
+        <label for="hobbies">What are some of your hobbies?</label>
+        <input name="hobbies" type="text">
+        <br><br>
+        <label for="education">Education: </label>
+        <select name="education" id="education">
+            <option value="select">Select</option>
+            <option value="Bachelor's">Bachelor's</option>
+            <option value="Masters">Master's</option>
+            <option value="PHD">PHD</option>
+            <option value="NA">No Post Secondary</option>
+           </select>
+        <br><br>
+
+        <input type="button" value="Submit" onclick="f()">
+        <script>
+            function f() {
+                let industry = document.getElementById("industry").value;
+                let income = document.getElementById("income").value;
+                let experience = document.getElementById("experience").value;
+                var per = Math.floor(Math.random() * 50) + 50;
+                var newPer = Math.floor(Math.random() * 30) + 70;
+                var opps = Math.floor(Math.random() * 30) + 30
+                var salary = Math.floor(Math.random() * 40000) + 60000
+
+                let newJob = " ";
+                if (industry=="Healthcare") {
+                    if (experience=="No") {
+                        newJob += "Volunteer Healthcare Worker"
+                    }
+                    else {
+                        if (income=="30") {
+                            newJob += "None"
+                        }
+                        else if (income=="50") {
+                            newJob += "Nurse"
+                        }
+                        else {
+                            newJob += "Doctor"
+                        }
+
+                    }
+                }
+                else if (industry=="Education") {
+                    if (experience=="No") {
+                        newJob += "Volunteer Education Worker"
+                    }
+                    else {
+                        if (income=="30") {
+                            newJob += "None"
+                        }
+                        else if (income=="50") {
+                            newJob += "Teacher's Assistant"
+                        }
+                        else {
+                            newJob += "Teacher"
+                        }
+
+                    }   
+                }                
+                else if (industry =="Transportation") {
+                    if (experience=="No") {
+                        newJob += "Truck Driver"
+                    }
+                    else {
+                        if (income=="30") {
+                            newJob += "Operations Management"
+                        }
+                        else if (income=="50") {
+                            newJob += "Logistics Analyst"
+                        }
+                        else {
+                            newJob += "Transportation Supervisor"
+                        }
+
+                    }                
+                }
+                document.getElementById("newJob").innerHTML = newJob;
+                document.getElementById("per").innerHTML = per;
+                document.getElementById("opps").innerHTML = opps;
+                document.getElementById("salary").innerHTML = salary;
+                document.getElementById("newPer").innerHTML = newPer;
+
+            }
+          
+        </script>
+    </form>
+    <p class="article">
+        There is a <span id="per"></span>% chance that your job can be done by AI. <br>
+        Suggested Positions: <br>
+        <strong> <span id ="newJob"></span> </strong> <br>
+        There are  <span id="opps"></span>  positions available<br>
+        <span id="newPer"></span>% chance that this job cannot be done by AI. <br>
+        Potential Salary: $<span id="salary"></span>
+    </p>   
+
+</html>

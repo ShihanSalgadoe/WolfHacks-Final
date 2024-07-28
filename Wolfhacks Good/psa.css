@@ -1,0 +1,227 @@
+#domainName {
+    text-align: center;
+    color: #253439;
+    padding-top: 50px;
+    margin: 0;
+    font-size: 70px;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#searchBox {
+    padding: 12px 12px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+}
+.scrollup {
+    text-align: center;
+    color: #253439;
+    cursor: pointer;
+    width: 50px;
+    position: relative;
+    left: 93%;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+#scrollDomain {
+    text-align: left;
+    
+}
+
+#img1 {
+    padding: 50px;
+}
+
+video {
+    text-align: center;
+    padding-left: 50px;
+}
+
+#scroller {
+    background-color: black;
+    width: 0%;
+    height: 10px;
+    bottom: 10px;
+    position: relative;
+    position: sticky;
+}
+
+#scrollbg {
+    background-color: gray;
+    width: 100%;
+    height: 10px;
+    position: relative;
+    position: sticky;
+}
+
+h3 {
+    text-align: center;
+    color: #36454F;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.fade {
+    animation: fadeIn 2s alternate;
+}
+
+body {
+    overflow-x: hidden; 
+}
+.article {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#line {
+    font-weight: bolder;
+    color: #C40C0C;
+    text-align: left;
+    padding: 50px;
+    padding-top: 0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.sticky + .content {
+    padding-top: 102px;
+}
+
+#nav {
+    background-color: #C40C0C;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding:0;
+    margin: 0;
+    position: relative;
+    position: sticky;
+}
+
+#domain {
+    background-image: url("bg.jpg");
+}
+#articleTitle {
+    padding: 50px;
+    text-align: center;
+    font-size: 30px;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 0;
+    padding-top: 20px;
+}
+
+#nav ul {
+    padding:0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+#nav ul li{
+    text-align: right;
+    font-size: 20px;
+}
+
+#nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#nav ul li a:hover {
+    color: black;
+}
+
+@media screen and (min-width: 800px) {
+    #nav ul li{
+        display: inline-flex;
+        border-bottom: 0px;
+        padding-right: 0px;
+        text-align: right;
+        padding: 5px;
+        font-size: 20px;
+        
+    }
+    #scrollDomain {
+        text-align: left;
+    }
+    #domainName {
+        text-align: center ;
+        font-size: 100px;
+    }
+    #articleTitle {
+        font-size: 50px;
+    }
+}
+.centerSignup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40% );
+    width: 500px;
+    height: 400px;
+    background: white;
+    border-radius: 2px;
+    }
+    .center h1 {
+    text-align: center;
+    padding: 0 0 2 0px 0;
+    border-bottom: 1px solid silver;
+    }
+    .center form {
+    padding: 0 60px;
+    box-sizing: border-box;
+    }
+    form .txt_field{
+        position: relative;
+        border-bottom: 2px solid #adadad;
+        margin: 30px 0;
+        }
+        .txt_field input {
+        width: 100%;
+        padding: 0 5px;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        background: none;
+        outline: none;
+        }
+        .txt_field label{
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        color:#adadad;
+        transform: translateY(-50%);
+        font-size: 16px;
+        pointer-events: none;
+        transition: .5s;
+        }
+        .txt_field span::before{
+        content:'';
+        position: absolute;
+        top: 40px;
+        left:0;
+        width: 100%;
+        height: 2px;
+        background: #2691d9;
+        }
+        .txt_field input:focus ~ label,
+        .txt_field input:valid ~ label{
+        top: -5px;
+        color: #2691d9;
+        }
